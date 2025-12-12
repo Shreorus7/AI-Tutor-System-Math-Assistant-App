@@ -1,0 +1,7 @@
+{
+  "name": "AI Tutor System: Math Assistant App",
+  "description": "A smart, patient tutor that helps students understand homework problems step-by-step using visual analysis.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

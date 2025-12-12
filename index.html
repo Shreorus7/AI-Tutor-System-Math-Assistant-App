@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Tutor System: Math Assistant App</title>
+    <meta name="description" content="AI-powered step-by-step homework assistance" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <style>
+      /* 
+         CRITICAL: Aggressively hide all MathML elements and annotations.
+         This prevents the "double rendering" where the browser displays the raw LaTeX source
+         alongside the rendered KaTeX HTML.
+      */
+      math, 
+      .katex-mathml, 
+      .katex-display > .katex > .katex-mathml,
+      annotation,
+      semantics,
+      annotation-xml {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        opacity: 0 !important;
+        position: absolute !important;
+        clip: rect(0, 0, 0, 0) !important;
+        border: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        pointer-events: none !important;
+        visibility: hidden !important;
+      }
+      
+      /* Ensure the rendered HTML version is visible */
+      .katex-html {
+        display: inline-block !important;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "react-markdown": "https://esm.sh/react-markdown@^10.1.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.560.0",
+    "rehype-katex": "https://esm.sh/rehype-katex@^7.0.1",
+    "remark-math": "https://esm.sh/remark-math@^6.0.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <div id="root"></div>
+  </body>
+</html>
